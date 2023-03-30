@@ -1,0 +1,81 @@
+$lightBrown: #655e58;
+$beige: #e5d4c6;
+
+body {
+  background-color: $lightBrown;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+#editor, #preview {
+  width: 45vw;
+  height: 75vh;
+  overflow: scroll;
+  background-color: $beige;
+  resize: none;
+  padding: 4px;
+}
+
+img {
+  max-width: 300px;
+}
+
+.desc {
+  font-size: 1.4rem;
+  margin: 0;
+  background-color: $beige;
+  border: solid 1px black;
+  padding: 4px;
+  color: $lightBrown;
+  text-align: center;
+}
+
+.left {
+  border-top-left-radius: 4px;
+}
+
+.right {
+  border-top-right-radius: 4px;
+}
+
+#credits, #nameLogo {
+  color: $beige;
+  text-align: center;
+  margin: 3px;
+}
+
+#portfolioLink {
+  text-decoration: none;
+}
+
+#credits:hover {
+  color: rgb(31, 29, 29);
+  transition: 0.3s;
+}
+
+@media only screen and (max-width:1000px) {
+  #app {
+    flex-direction: column;
+  }
+
+  #editor, #preview {
+    width: 100vw;
+  }
+
+  #credits {
+    position: relative;
+    text-align: center;
+  }
+
+}
